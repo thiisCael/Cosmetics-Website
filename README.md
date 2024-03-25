@@ -1,5 +1,15 @@
-<h1>Projeto Ramo Cosméticos</h1>
+<h1>Cosmetics Project</h1>
 
 >Status: Developing ⚠️
+>>Responsive website 🖥️ 📱
+### 🚨 About
+This is a practical cosmetics website project developed as part of the Alura course. It features an interactive navigation menu and uses JavaScript to implement features such as menu button click (Products) and responsive mode (mini-hamburger). Integrated the Swiper JS plugin for the image carousel (in responsive mode).
 
-##### Este é um projeto práticos de website de cosméticos desenvolvido como parte do curso Alura, Ele apresenta um menu de navegação interativo e utiliza JavaScript para implementar funcionalidades como o clique do botão do menu (Produtos) e do modo responsivo(mini-hambúrguer). Integrado o plugin Swiper JS para o carrossel de imagens(no modo responsivo). 
+### ⚙️ functionalities 
+
+* **Navigation Menu:** An interactive navigation menu that allows users to access different sections of the website, including the products section.
+* **Products:** A section dedicated to displaying the cosmetic products offered, with images and relevant information.
+* **Integration with Swiper JS:** Using Swiper Js to create a responsive and attractive image carousel.
+
+### Tecnologias Utilizadas 
+* HTML5 <img src="
