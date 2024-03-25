@@ -1,0 +1,73 @@
+/* o titulo usei mesma class */ 
+.subtitulo-produtos{ 
+    width: 60px;
+    height: 5px;
+    background-color: var(--branco);
+    border-radius: 99999px;
+    margin: 8px auto 0 auto;
+}
+
+/*Tamanho do produto*/
+.card-container{ 
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 10rem;
+    padding-left: 5rem;
+    padding-top: 4rem; 
+    gap: 2rem;
+}
+
+/*Personalização dentro do card*/
+.card{ 
+    background-color: #d3d3d3;
+    width: 30%; 
+    height: 50%;
+    border-radius: 12px;
+    box-shadow: 2px 2px 2px 2px #a7a7a7;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* itens dentro do card*/
+.card div{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px; 
+    height: auto;
+}
+.card img{ 
+    width: 10rem;
+    margin-top: 2rem;
+}
+.card h2{ 
+    font-size: 1.2rem;
+}
+.card p{ 
+    font-size: .9rem;
+    color: #7a7a7a;
+    text-align: center; 
+}
+.card button{ 
+    background-color: var(--cor2);
+    height: 30px;
+    border: none;
+    padding: 4px;
+    width: 50%;
+    color: var(--branco);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.card button:hover{ background-color: var(--cor3);}
+
+.card:hover{
+    transform: translateY(-10px);
+ }
+
+
+

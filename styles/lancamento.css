@@ -1,0 +1,42 @@
+/* lancamento tamanho  */
+.coluna1{ 
+    display: grid;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 4rem 1.5rem;
+    margin-bottom: 0rem;
+    margin-right: 1rem;
+} 
+.coluna-5{ 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; 
+}
+.coluna-5 img{ 
+    width: 15rem;
+    height: auto;
+}
+
+.coluna-5>*{ 
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.coluna-5> *:hover{ 
+    transform: translateY(-20px);
+}
+
+.coluna-5 p{ 
+    color: var(--preto-1);
+    font-family: var(--fonte2);
+    line-height: 1.5rem;
+    font-weight: 400; 
+    margin-bottom: 1rem;
+}
+
+.destaque_{ 
+    color: #69508E;
+}
+
+/* Alguns eu adquiri a mesma class por motivos
+de ter o mesmo sentido, depois eu fui mudando e acabou ficando assim
+pos eu achei melhor desse jeito */

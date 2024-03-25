@@ -1,0 +1,70 @@
+header{ 
+    background-image: radial-gradient(#FFF, #c7c7c7);
+}
+
+/*  especificações tamanho*/
+.header-baixo{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+
+.header-lado-esquerdo{ 
+    height: 100%;
+    flex-basis: 50%;
+}
+
+.header-lado-esquerdo h2{ 
+    font-family: 'font1';
+    color: var(--cor2);
+   font-size: 3.2rem;
+   margin-bottom: 1.7rem;
+   margin-right: 1rem;
+}
+
+.header-lado-esquerdo p{ 
+    color: var(--preto-1);
+    line-height: 1.5rem;
+    margin-bottom: 1.7rem;
+    margin-right: 1rem;
+    font-family: var(--fonte2);
+    font-size: auto;
+    font-weight: 400;
+}
+
+.header-lado-esquerdo button{ 
+    background-color: var(--cor2);
+    font-family: 'font4';
+    box-shadow: 0 0 20px var(--cor1);
+    color: var(--branco);
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem 3.8rem;
+    border-radius: 9999px;
+    font-weight: 400;
+    transition: all 0.2s;
+    margin-top: 1rem; 
+    width: 220px;
+    height: 50px;
+
+}
+
+.header-lado-esquerdo button:hover{ 
+    background-color: var(--cor3);
+    
+}
+
+/* --------- */
+.header-lado-direito{ 
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-lado-direito img{ 
+    width: 100%;
+    border-radius: 7px;
+}

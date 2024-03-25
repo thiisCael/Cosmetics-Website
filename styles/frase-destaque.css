@@ -1,0 +1,29 @@
+
+/* frase destaque mesmo sentido do de cima */ 
+.exclusivo{ 
+    box-shadow: 0 0 10px;
+
+}
+.exclusivo-container{ 
+    color: var(--branco);
+    flex-direction: row-reverse;
+    padding: 7rem 1rem;
+}
+
+.excluisvo-lado a{ 
+  margin-left: 17rem; 
+  
+}
+
+
+.excluisvo-lado h2{ 
+    color: var(--cor4);
+    font-family: 'font1';
+    text-align: center;
+    
+    
+}
+
+.exclusivo-lado-direito img{ 
+    width: 100%;
+}
