@@ -33,7 +33,7 @@ This is a practical cosmetics website project developed as part of the Alura cou
 ## 🚀 Development Experience
 During the creation process, I faced challenges such as implementing interactive features with JavaScript and integrating plugins like Swiper JS to enhance the user experience in responsive mode. I'm very happy to have made it
 
-Throughout development, I learned the importance of code organization. Although I didn't have much experience, I learned a lot and added some comments in _CSS_ to make it easier for those who collaborate or even for me in the future. Furthermore, the experience of working with images and design gave me even more knowledge in the area of ​​_CSS_.
+Throughout development, I learned the importance of code organization. Although I didn't have much experience, I learned a lot and added some comments in _CSS_ to make it easier for those who collaborate or even for me in the future. Furthermore, the experience of working with images and design gave me even more knowledge in the area of ​​CSS.
 
 I'm proud of the end result. It was a very intense week and I hope that this project will not only demonstrate my technical skills, but also convey my passion for the field of technology.
 
