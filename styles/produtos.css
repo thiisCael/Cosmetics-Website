@@ -1,73 +1,99 @@
-/* o titulo usei mesma class */ 
-.subtitulo-produtos{ 
-    width: 60px;
-    height: 5px;
-    background-color: var(--branco);
-    border-radius: 99999px;
-    margin: 8px auto 0 auto;
+* {
+  box-sizing: border-box;
+}
+.subtitulo-produtos {
+  width: 60px;
+  height: 5px;
+  background-color: var(--branco);
+  border-radius: 99999px;
+  margin: 8px auto 0 auto;
 }
 
-/*Tamanho do produto*/
-.card-container{ 
-    display: flex; 
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-bottom: 10rem;
-    padding-left: 5rem;
-    padding-top: 4rem; 
-    gap: 2rem;
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
 
-/*Personalização dentro do card*/
-.card{ 
-    background-color: #d3d3d3;
-    width: 30%; 
-    height: 50%;
-    border-radius: 12px;
-    box-shadow: 2px 2px 2px 2px #a7a7a7;
-    cursor: pointer;
-    transition: all 0.3s;
+.card {
+  background-color: #fff;
+  width: calc(
+    33.333% - 2rem
+  ); /* Cada cartão ocupa um terço do espaço menos o gap */
+  max-width: 300px; /* Garante que o cartão não ultrapasse 300px */
+  margin: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
 
-/* itens dentro do card*/
-.card div{ 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 4px; 
-    height: auto;
-}
-.card img{ 
-    width: 10rem;
-    margin-top: 2rem;
-}
-.card h2{ 
-    font-size: 1.2rem;
-}
-.card p{ 
-    font-size: .9rem;
-    color: #7a7a7a;
-    text-align: center; 
-}
-.card button{ 
-    background-color: var(--cor2);
-    height: 30px;
-    border: none;
-    padding: 4px;
-    width: 50%;
-    color: var(--branco);
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    margin-bottom: 2rem;
+.card:hover {
+  transform: translateY(-10px);
 }
 
-.card button:hover{ background-color: var(--cor3);}
+.card img {
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+}
 
-.card:hover{
-    transform: translateY(-10px);
- }
+.card div {
+  padding: 1rem;
+}
 
+.card h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
 
+.card p {
+  font-size: 1rem;
+  color: #777;
+  margin: 0.5rem 0;
+}
 
+.card .preco {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.compra {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.compra button {
+  flex: 1;
+  margin: 0 0.5rem;
+  background-color: var(--cor1);
+  border: none;
+  padding: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.compra button:hover {
+  background-color: var(--cor2);
+}
+
+/* Media query para responsividade */
+@media (max-width: 900px) {
+  .card {
+    width: calc(
+      50% - 2rem
+    ); /* Cada cartão ocupa metade do espaço em telas menores */
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: calc(
+      100% - 2rem
+    ); /* Cada cartão ocupa todo o espaço disponível em telas muito pequenas */
+  }
+}

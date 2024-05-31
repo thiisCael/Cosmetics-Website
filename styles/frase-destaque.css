@@ -1,29 +1,41 @@
-
-/* frase destaque mesmo sentido do de cima */ 
-.exclusivo{ 
-    box-shadow: 0 0 10px;
-
-}
-.exclusivo-container{ 
-    color: var(--branco);
-    flex-direction: row-reverse;
-    padding: 7rem 1rem;
+/* frase destaque mesmo sentido do de cima */
+.exclusivo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.excluisvo-lado a{ 
-  margin-left: 17rem; 
-  
+.form-group {
+  margin-bottom: 15px;
 }
 
-
-.excluisvo-lado h2{ 
-    color: var(--cor4);
-    font-family: 'font1';
-    text-align: center;
-    
-    
+label {
+  display: block;
+  margin-bottom: 5px;
 }
 
-.exclusivo-lado-direito img{ 
-    width: 100%;
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.exclusivo-lado h2 {
+  color: var(--cinza-solido);
 }

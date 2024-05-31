@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/styles/globals.css">
     <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ranga:wght@400;700&display=swap" rel="stylesheet"> 
@@ -32,20 +33,23 @@
                 </ul>
             </nav>
             <div class="nav-icon"> 
-                <img src="/img/coracao.png" alt="Meu faorito">
-                <img src="/img/carrinho-de-compras.png" alt="Carrinho"> 
+                <div class="icon"> 
+                <a href="/login.html"><i class="bi bi-person"></i></a>
+                <a href="#"><i class="bi bi-heart"></i></a>
+                <a href="#"><i class="bi bi-cart"></i></a>
+
+            </div>
                 <img src="/img/menu-hamburguer.svg" alt="Menu" class="menu-mob"> 
             </div>
         </div>
     </div>
-
+    
     <header> 
         <div class="header-interno-conteudo"> 
             <div class="header-baixo"> 
-                <div class="header-lado-esquerdo"> 
-                    <h2 class="titulo__destaque">Revele sua beleza natural com<span> nossa coleção de cosméticos inspiradores. </span></h2>
-                    <p class="texto__destaque">Revele sua verdadeira beleza com nossa coleção exclusiva de cosméticos. Descubra o segredo para uma pele radiante e um visual deslumbrante. Transforme-se e brilhe com nossos produtos inspiradores.</p>
-                    <button> Descubra &#8594</button>
+                <div class="header-lado-esquerdo ld-es"> 
+                    <h2 class="titulo__destaque">Revele sua beleza natural com nossa coleção de cosméticos inspiradores.<span>  Ganhe 25% de Desconto em produtos lançamentos</span></h2>
+                    <button class="btn-desconto">Descubra</button>
                 </div>
                 <div class="header-lado-direito">
                     <img src="/img/foto_destaque.png" alt="foto de mulher com comesticos"> 
@@ -66,10 +70,15 @@
                         <img src="/maquiagem/base.png" alt="Base Maquiagem"  class="destaque-main" > 
                         <img src="/skin care/creme para pele.png" alt="Creme para pele"  class="destaque-main"> 
 
-                        <p>Perfume Imperador Noturno <a href="#novo" alt="Perfume Imperador Noturno"> Saiba Mais </a></p>
-                        <p>Perfume Sushine<a href="#novo" alt="Perfume Sushine"> Saiba Mais </a></p>
-                        <p> Base Meio-Tom Noir<a href="#novo" alt="Base Black">Saiba Mais </a></p> 
-                        <p> Creme para pele <a href="#novo" alt="Creme para pele">Saiba Mais</a></p>
+                        <div id="passar_mouse"><a href="#">Saiba Mais</a><div id="mostrar"><p>Perfume Imperador Noturno. 
+                            Essencial para suas noites.</p></div></div> 
+                        <div id="passar_mouse"><a href="#">Saiba Mais</a><div id="mostrar"><p>Perfume Sushine. 
+                                Essencial para seu dia.</p></div></div>
+                        <div id="passar_mouse"><a href="#">Saiba Mais</a><div id="mostrar"><p>Base Meio-Tom Noir. 
+                                    Para peles escuras, ótima qualidade.</p></div></div> 
+                        <div id="passar_mouse"><a href="#">Saiba Mais</a><div id="mostrar"><p>Creme para pele. 
+                                        Para peles ressecadas, de lavanda.</p></div></div>
+                        
                     </div>
                         <div class="carrossel_container">
                              <!-- Slider main container -->
@@ -103,10 +112,10 @@
                     </div>
             <div> 
                 <div class="page-interno-couteudo"> 
-                        <h3 class="section-title"> Produtos Destaque </h3>
+                        <h3 class="section-title"> Produtos Lançamento </h3>
                 <div class="subtitulo-underline"> </div>
                     <div class="coluna  coluna-6"> 
-                         <div class="produto"> 
+                         <div class="produto" data-id="1"> 
                             <div class="circulo"> 
                                 <img src="/perfumes-men/blue fresh.png" alt="perfume blue" class="img-produto">
                                 <p class="produto-nome"><span>Fresh Blue</span></p>
@@ -114,37 +123,66 @@
                                      Combinando notas cítricas e aquáticas, esta fragrância
                                       é perfeita para quem busca  uma sensação revigorante e elegante.</p>
                                 <p class="rate"><span> &#9733; &#9733; &#9733; &#9733; &#9733 </span></p>
-                                <p class="valor">R$500,00</p></div>
+                                <div class="preco">
+                                    <span class="preco-antigo">R$500,00</span> 
+                                    <span class="preco-novo"></span>
+                                </div>
+                                <div class="lado-dir"> 
+                                <button id="carrinho-lj" ><i class="bi bi-cart"></i></button>
+                                <button id="fav" ><i class="bi bi-heart"></i></button>
+                            </div>
+                                </div>
                              </div> 
-
-                            <div class="produto"> 
+                            
+                            <div class="produto" data-id="2"> 
                                 <div class="circulo">
                                 <img src="/perfumes-woman/pink.png" alt="perfume pink" class="img-produto">
                                 <p class="produto-nome"><span>Rosas Encantadoras</span></p>
                                 <p class="descricao-produto">Um aroma delicado que dança entre as pétalas,<br> 
                                     capturando a essência da feminilidade em cada gota.</p>
                                 <p class="rate"><span>  &#9733; &#9733; &#9733; &#9733; &#9733</span> </p>
-                                <p class="valor">R$390,00</p></div>
+                                <div class="preco">
+                                    <span class="preco-antigo">R$390,00</span> <span class="preco-novo"></span>
+                                </div>
+                                <div class="lado-dir"> 
+                                <button id="carrinho-lj" ><i class="bi bi-cart"></i></button>
+                                <button id="fav" ><i class="bi bi-heart"></i></button>
                             </div>
-                            <div class="produto"> 
+                            </div>
+                            </div>
+                            <div class="produto" data-id="3"> 
                                 <div class="circulo">
                                 <img src="/maquiagem/gloss.png" alt="gloss" class="img-produto">
                                 <p class="produto-nome"><span>Pink Petal Shine</span></p>
                                 <p class="descricao-produto">Brilhe como uma pétala rosa com nosso gloss delicado, <br> 
                                     que realça sua beleza natural com um toque de suavidade e luminosidade</p>
                                 <p class="rate"><span>&#9733; &#9733; &#9733; &#9733; &#9733 </span></p>
-                                <p class="valor">R$15,00</p> </div>
+                                <div class="preco">
+                                    <span class="preco-antigo">R$15,00</span> <span class="preco-novo"></span>
+                                </div>
+                                <div class="lado-dir"> 
+                                <button id="carrinho-lj" ><i class="bi bi-cart"></i></button>
+                                <button id="fav"><i class="bi bi-heart"></i></button>
+                            </div>
+                            </div>
                             </div> 
-                            <div class="produto"> 
+                            <div class="produto" data-id="4"> 
                                 <div class="circulo">
                                 <img src="/skin care/tonico facial.png" alt="Tonico facial" class="img-produto">
                                 <p class="produto-nome"><span>Midnight Renewal</span></p>
                                 <p class="descricao-produto">Um segredo noturno para uma pele radiante. Deixe-se envolver pela luxúria do 
                                     nosso tônico facial,<br> que revitaliza e renova sua pele enquanto você dorme.</p>
                                 <p class="rate"><span>&#9733; &#9733; &#9733; &#9733; &#9733</span> </p>
-                                <p class="valor">R$24,90</p> </div>
+                                <div class="preco">
+                                    <span class="preco-antigo">R$24,90</span> <span class="preco-novo"></span>
+                                    <div class="lado-dir"> 
+                                    <button id="carrinho-lj" ><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
+                                </div>
                             </div>
-                            <div class="produto"> 
+                            </div>
+                            <div class="produto" data-id="5"> 
                                 <div class="circulo">
                                 <img src="/corpo/oleo-corporal.png" alt="Oleo Corporal" class="img-produto">
                                 <p class="produto-nome"><span>Ébano Sedutor</span></p>
@@ -152,10 +190,17 @@
                                     Sua pele merece ser mimada com <br> a suavidade sedosa deste elixir, deixando-a irresistivelmente 
                                     macia e radiante.</p>
                                 <p class="rate"><span>&#9733; &#9733; &#9733; &#9733; &#9733</span></p>
-                                <p class="valor">R$35,00</p> </div> 
+                                <div class="preco">
+                                    <span class="preco-antigo">R$35,00</span> <span class="preco-novo"></span>
+                                    <div class="lado-dir"> 
+                                    <button id="carrinho-lj" ><i class="bi bi-cart"></i></button>
+                                    <button id="fav" ><i class="bi bi-heart"></i></button>
+                                </div>
+                                </div>
+                             </div> 
                             </div>
 
-                            <div class="produto"> 
+                            <div class="produto" data-id="6"> 
                                 <div class="circulo">
                                 <img src="/maquiagem/po facial.png" alt="Pó facial" class="img-produto">
                                 <p class="produto-nome"><span>Éclat Noir</span></p>
@@ -163,7 +208,14 @@
                                     'Éclat Noir' oferece um acabamento sedoso e matte,<br> para uma pele perfeita 
                                     que brilha com confiança.</p>
                                 <p class="rate"><span>&#9733; &#9733; &#9733; &#9733; &#9733</span></p>
-                                <p class="valor">R$25,00</p> </div>
+                                <div class="preco">
+                                    <span class="preco-antigo">R$25,00</span> <span class="preco-novo"></span>
+                                </div>
+                                <div class="lado-dir"> 
+                                 <button id="carrinho-lj" ><i class="bi bi-cart"></i></button>
+                                 <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
+                            </div>
                             </div>
                     </div>
                     <div class="carrossel_container">
@@ -176,70 +228,112 @@
                                      <!-- Slides -->
                                       <div class="swiper-slide"> 
                                         
-                                            <div class="circulo"> 
+                                            <div class="circulo" data-id="1"> 
                                                 <img src="/perfumes-men/blue fresh.png" alt="perfume blue" class="img-produto">
                                                 <p class="produto-nome"><span>Fresh Blue</span></p>
                                                 <p class="descricao-produto"> O perfume <b class="negrito">Fresh Blue</b> é uma explosão de frescor em cada borrifada.
                                                     Combinando notas cítricas e aquáticas, esta fragrância
                                                     é perfeita para quem busca  uma sensação revigorante e elegante.</p>
                                                 <p class="rate"><span> &#9733; &#9733; &#9733; &#9733; &#9733 </span></p>
-                                                <p class="valor">R$500,00</p></div> 
+                                                <div class="preco">
+                                                    <span class="preco-antigo">R$500,00</span> <span class="preco-novo"></span>
+                                                </div>
+                                                <div class="lado-dir"> 
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div>
+                                            </div> 
                                       </div>
                                             
 
                                    <div class="swiper-slide"> 
-                                        <div class="circulo"> 
+                                        <div class="circulo" data-id="2"> 
                                             <img src="/perfumes-woman/pink.png" alt="perfume pink" class="img-produto">
                                             <p class="produto-nome"><span>Rosas Encantadoras</span></p>
                                             <p class="descricao-produto">Um aroma delicado que dança entre as pétalas,<br> 
                                                 capturando a essência da feminilidade em cada gota.</p>
                                             <p class="rate"><span>  &#9733; &#9733; &#9733; &#9733; &#9733</span> </p>
-                                            <p class="valor">R$390,00</p></div>
+                                            <div class="preco">
+                                                <span class="preco-antigo">R$390,00</span> <span class="preco-novo"></span>
+                                            </div>
+                                            <div class="lado-dir">
+                                            <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                            <button id="fav"><i class="bi bi-heart"></i></button>
+                                        </div>
+                                            </div>
                                    </div>
 
                                    <div class="swiper-slide">
                                         
-                                        <div class="circulo">
+                                        <div class="circulo" data-id="3">
                                             <img src="/maquiagem/gloss.png" alt="gloss" class="img-produto">
                                             <p class="produto-nome"><span>Pink Petal Shine</span></p>
                                             <p class="descricao-produto">Brilhe como uma pétala rosa com nosso gloss delicado, <br> 
                                                 que realça sua beleza natural com um toque de suavidade e luminosidade</p>
                                             <p class="rate"><span>&#9733; &#9733; &#9733; &#9733; &#9733 </span></p>
-                                            <p class="valor">R$15,00</p> </div>
+                                            <div class="preco">
+                                                <span class="preco-antigo">R$15,00</span> <span class="preco-novo"></span>
+                                            </div>
+                                            <div class="lado-dir">
+                                            <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                            <button id="fav"><i class="bi bi-heart"></i></button>
+                                        </div>
+                                        </div>
                                    </div>
                                        
                                    <div class="swiper-slide"> 
 
-                                    <div class="circulo">
+                                    <div class="circulo" data-id="4">
                                         <img src="/skin care/tonico facial.png" alt="Tonico facial" class="img-produto">
                                         <p class="produto-nome"><span>Midnight Renewal</span></p>
                                         <p class="descricao-produto">Um segredo noturno para uma pele radiante. Deixe-se envolver pela luxúria do 
                                             nosso tônico facial,<br> que revitaliza e renova sua pele enquanto você dorme.</p>
                                         <p class="rate"><span>&#9733; &#9733; &#9733; &#9733; &#9733</span> </p>
-                                        <p class="valor">R$24,90</p> </div>
+                                        <div class="preco">
+                                            <span class="preco-antigo">R$24,90</span> <span class="preco-novo"></span>
+                                        </div> 
+                                        <div class="lado-dir"> 
+                                        <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                        <button id="fav"><i class="bi bi-heart"></i></button>
+                                    </div>
+                                    </div>
                                    </div>
                                    <div class="swiper-slide"> 
 
-                                    <div class="circulo">
+                                    <div class="circulo" data-id="5">
                                         <img src="/corpo/oleo-corporal.png" alt="Oleo Corporal" class="img-produto">
                                         <p class="produto-nome"><span>Ébano Sedutor</span></p>
                                         <p class="descricao-produto"> Deslize pela sedução com nosso óleo corporal de luxo. 
                                             Sua pele merece ser mimada com <br> a suavidade sedosa deste elixir, deixando-a irresistivelmente 
                                             macia e radiante.</p>
                                         <p class="rate"><span>&#9733; &#9733; &#9733; &#9733; &#9733</span></p>
-                                        <p class="valor">R$35,00</p> </div> 
+                                        <div class="preco">
+                                            <span class="preco-antigo">R$35,00</span> <span class="preco-novo"></span>
+                                        </div> 
+                                        <div class="lado-dir"> 
+                                        <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                        <button id="fav"><i class="bi bi-heart"></i></button>
+                                    </div>
+                                    </div> 
 
                                    </div>
                                    <div class="swiper-slide"> 
 
-                                    <div class="circulo">
+                                    <div class="circulo" data-id="6">
                                         <img src="/maquiagem/po facial.png" alt="Pó facial" class="img-produto">
                                         <p class="produto-nome"><span>Éclat Noir</span></p>
                                         <p class="descricao-produto"> O toque final para um brilho impecável. O pó facial 
                                             'Éclat Noir' oferece um acabamento sedoso e matte,<br> para uma pele perfeita 
                                             que brilha com confiança.</p>
                                         <p class="rate"><span>&#9733; &#9733; &#9733; &#9733; &#9733</span></p>
-                                        <p class="valor">R$25,00</p> </div>
+                                        <div class="preco">
+                                            <span class="preco-antigo">R$25,00</span> <span class="preco-novo"></span>
+                                        </div>
+                                        <div class="lado-dir"> 
+                                        <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                        <button id="fav"><i class="bi bi-heart"></i></button>
+                                    </div>
+                                    </div>
 
                                    </div>
                                </div>
@@ -248,152 +342,35 @@
                         </div>
                      </div>
                    </div>
-
-
-
-                    <div class="page-interno-couteudo"> 
-                        <h3 class="section-title" id="novo"> Produtos Lançamento </h3>
-                        <div class="subtitulo-underline"> </div>
-                    <div class="coluna1  coluna-5"> 
-
-                             <div class="produto"> 
-                                <div class="circulo">
-                                <img src="/perfumes-woman/sushine.png" alt="perfume Sushine" class="img-produto">
-                                <p class="produto-nome"><span>Perfume Sushine</span></p>
-                                <p class="descricao-produto">Uma fragrância que captura a alegria e o calor do verão em cada borrifada</p>
-                                <p class="valor">R$287,00 <span class="destaque_"> (para um pote de 100ml)</span></p> </div>
-                             </div> 
-
-                            <div class="produto"> 
-                                <div class="circulo">
-                                <img src="/perfumes-men/coroa.png" alt="perfume coroa" class="img-produto">
-                                <p class="produto-nome"><span> Perfume Imperador Noturno</span></p>
-                                <p class="descricao-produto">Domine a noite com o aroma da realeza.</p>
-                                <p class="valor">R$190,00<span class="destaque_"> (para um frasco de 50ml)</span></p></div>
-                            </div>
-
-                            <div class="produto"> 
-                                 <div class="circulo">
-                                <img src="/maquiagem/base.png" alt="base" class="img-produto">
-                                <p class="produto-nome"><span> Base Meio-Tom Noir</span></p>
-                                <p class="descricao-produto">Sinta-se confiante e resplandecente em cada aplicação.</p>
-                                <p class="valor">R$25,00<span class="destaque_"> (para um pote de 50ml)</span></p></div>
-                            </div> 
-
-                            <div class="produto"> 
-                                <div class="circulo">
-                                <img src="/skin care/creme para pele.png" alt="Creme para pele" class="img-produto">
-                                <p class="produto-nome"><span>Creme para Pele</span></p>
-                                <p class="descricao-produto">Este creme luxuoso nutre, hidrata e restaura.</p>
-                                <p class="valor">R$35,00<span class="destaque_"> (para um pote de 50ml)</span></p></div>
-                            </div>
-
-                             <div class="produto"> 
-                                <div class="circulo"> 
-                                <img src="/cabelo/shampoo.png" alt="shampoo" class="img-produto">
-                                <p class="produto-nome"><span>Shampoo Sedução dos Cabelos</span></p>
-                                <p class="descricao-produto">Descubra a sedução nos seus fios com o 'Sedução dos Cabelos'.</p>
-                                <p class="valor">R$30,00<span class="destaque_"> (para uma embalagem de 350ml)</span></p></div>
-                            </div>
-
-                        <div class="produto"> 
-                            <div class="circulo">
-                            <img src="/maquiagem/batom.png" alt="batom vermelho" class="img-produto">
-                            <p class="produto-nome"><span>Vermelho Intenso</span></p>
-                            <p class="descricao-produto">Sua cor vibrante e duradoura é perfeita para realçar seus lábios e elevar seu estilo para um novo nível.</p>
-                            <p class="valor">R$18,00<span class="destaque_"> (para um batom de 4g)</span></p></div>
-                        </div>  
-                    </div>
-                
-                
-                <div class="carrossel_container"> 
-                    <div class="swiper">
-                        <div class="swiper-pagination"></div>  
-                        <div class="swiper-wrapper"> 
-                            <div class="swiper-slide"> 
-
-                                <div class="produto"> 
-                                    <div class="circulo">
-                                    <img src="/perfumes-woman/sushine.png" alt="perfume Sushine" class="img-produto">
-                                    <p class="produto-nome"><span>Perfume Sushine</span></p>
-                                    <p class="descricao-produto">Uma fragrância que captura a alegria e o calor do verão em cada borrifada</p>
-                                    <p class="valor">R$287,00 <span class="destaque_"> (para um pote de 100ml)</span></p> </div>
-                                 </div> 
-
-                            </div>
-
-                            <div class="swiper-slide"> 
-                                <div class="produto"> 
-                                    <div class="circulo">
-                                    <img src="/perfumes-men/coroa.png" alt="perfume coroa" class="img-produto">
-                                    <p class="produto-nome"><span> Perfume Imperador Noturno</span></p>
-                                    <p class="descricao-produto">Domine a noite com o aroma da realeza.</p>
-                                    <p class="valor">R$190,00<span class="destaque_"> (para um frasco de 50ml)</span></p></div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide"> 
-                                <div class="produto"> 
-                                    <div class="circulo">
-                                   <img src="/maquiagem/base.png" alt="base" class="img-produto">
-                                   <p class="produto-nome"><span> Base Meio-Tom Noir</span></p>
-                                   <p class="descricao-produto">Sinta-se confiante e resplandecente em cada aplicação.</p>
-                                   <p class="valor">R$25,00<span class="destaque_"> (para um pote de 50ml)</span></p></div>
-                               </div> 
-                            </div>
-                            <div class="swiper-slide"> 
-                                <div class="produto"> 
-                                    <div class="circulo">
-                                    <img src="/skin care/creme para pele.png" alt="Creme para pele" class="img-produto">
-                                    <p class="produto-nome"><span>Creme para Pele</span></p>
-                                    <p class="descricao-produto">Este creme luxuoso nutre, hidrata e restaura.</p>
-                                    <p class="valor">R$35,00<span class="destaque_"> (para um pote de 50ml)</span></p></div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide"> 
-                                <div class="produto"> 
-                                    <div class="circulo"> 
-                                    <img src="/cabelo/shampoo.png" alt="shampoo" class="img-produto">
-                                    <p class="produto-nome"><span>Shampoo Sedução dos Cabelos</span></p>
-                                    <p class="descricao-produto">Descubra a sedução nos seus fios com o 'Sedução dos Cabelos'.</p>
-                                    <p class="valor">R$30,00<span class="destaque_"> (para uma embalagem de 350ml)</span></p></div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide"> 
-                                <div class="produto"> 
-                                    <div class="circulo">
-                                    <img src="/maquiagem/batom.png" alt="batom vermelho" class="img-produto">
-                                    <p class="produto-nome"><span>Vermelho Intenso</span></p>
-                                    <p class="descricao-produto">Sua cor vibrante e duradoura é perfeita para realçar seus lábios e elevar seu estilo para um novo nível.</p>
-                                    <p class="valor">R$18,00<span class="destaque_"> (para um batom de 4g)</span></p></div>
-                                </div>
-                            </div>
-
+                   <div class="cor-de-fundo exclusivo"> 
+                    <div class="page-interno-conteudo"> 
+                      <div class="header-baixo exclusivo-container"> 
+                        <div class="header-lado-esquerdo exclusivo-lado"> 
+                          <h2>Dê seu feedBack, é muito importante para nós! </h2>
                         </div>
-                        <div class="swiper-pagination"></div>
-
-
+                        <div class="header-lado-direito exclusivo-lado-direito">
+                          <form id="feedback-form">
+                            <div class="form-group">
+                              <label for="nome">Nome:</label>
+                              <input type="text" id="nome" name="nome" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="email">Email:</label>
+                              <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="mensagem">Mensagem:</label>
+                              <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                            </div>
+                            <button type="submit">Enviar Feedback</button>
+                          </form>
+                        </div>
+                      </div>
                     </div>
-                </div>
-                    </div>
-
-          </div>
-
-          <div class="cor-de-fundo exclusivo"> 
-             <div class="page-interno-conteudo"> 
-                <div class="header-baixo exclusivo-container"> 
-                    <div class="header-lado-esquerdo  excluisvo-lado"> 
-                        <h2>Descubra a magia em cada aplicação.   <br>   Seja você, extraordinária.</h2>
-                        <a href="#" alt="seta para baixo"><img src="/img/arrow-circle-down-fill.svg"></a>
-                    </div>
-                    <div class="header-lado-direito exclusivo-lado-direito">
-                        <img src="/img/fotooo.png" alt="foto de 50% desconto"> 
-                    </div>
-                </div>
-             </div>
-          </div>
+                  </div>
             <div class="topico-cima"> 
                     <h3 class="section-title" id="perfumaria"> Perfumaria </h3>
-                    <div class="subtitulo-produtos"> </div>
+                    <div class="subtitulo-produtos"></div>
                     </div>
 
                 <div class="card-container"> 
@@ -402,24 +379,46 @@
                             <img src="/perfumes-woman/amarelo.png" alt="Perfume Mirage Dourado">
                             <h2>Mirage Dourado</h2>
                             <p>Deserto de ouro em um frasco perfumado.</p>
-                            <span >R$ 200,00</span>
-                            <button>Compra Agora</button> </div>
+                            <span >R$ 200,00</span> 
+                            <div class="compra"> 
+                            <button class="compra-agora">Compra Agora</button>
+                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                <button id="fav"><i class="bi bi-heart"></i></button>
+                            </div>
+                        </div>
                     </div>
+                
+    
                     <div class="card"> 
                         <div>
                             <img src="/perfumes-men/blue fresh.png" alt="Perfume Fresh Blue">
                             <h2>Fresh Blue</h2>
                             <p>Uma explosão de frescor. </p>
-                            <span >R$ 500,00</span>
-                            <button>Compra Agora</button></div>
+                            <div class="preco">
+                                <span class="preco-antigo">R$500,00</span> 
+                                <span class="preco-novo"></span>
+                            </div>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
+                        </div>
                     </div>
                     <div class="card"> 
                         <div>
                             <img src="/perfumes-woman/pink.png" alt="Perfume Rosas Encantadoras">
                             <h2>Rosas Encantadoras</h2>
                             <p>Um aroma delicado que dança entre as pétalas.</p>
-                            <span >R$ 390,00</span>
-                            <button>Compra Agora</button></div>
+                            <div class="preco">
+                                <span class="preco-antigo">R$390,00</span> 
+                                <span class="preco-novo"></span>
+                            </div>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div></div>
                     </div>
                     <div class="card"> 
                         <div>
@@ -427,7 +426,11 @@
                             <h2>Imperador Noturno</h2>
                             <p>Domine a noite com o aroma da realeza</p>
                             <span >R$ 190,00</span>
-                            <button>Compra Agora</button></div>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div></div>
                     </div>
                     <div class="card"> 
                         <div>
@@ -435,7 +438,11 @@
                             <h2>Pure Essence</h2>
                             <p>Uma essência fresca e delicada em branco.</p>
                             <span >R$ 120,00</span>
-                            <button>Compra Agora</button></div>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div></div>
                     </div>
                     <div class="card"> 
                         <div>
@@ -443,7 +450,11 @@
                             <h2>Midnight Elixir</h2>
                             <p>Fragrância intensa e sedutora.</p>
                             <span >R$ 800,00</span>
-                            <button>Compra Agora</button></div>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div></div>
                     </div> 
                     <div class="card"> 
                         <div>
@@ -451,7 +462,11 @@
                             <h2>Radiant Bloom</h2>
                             <p>Fragrância luminosa e vibrante</p>
                             <span >R$ 100,00</span>
-                            <button>Compra Agora</button></div>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div></div>
                     </div>
                     <div class="card"> 
                         <div>
@@ -459,7 +474,11 @@
                             <h2>Evergreen Essence</h2>
                             <p> A energia e vitalidade da natureza.</p>
                             <span >R$ 170,00</span>
-                            <button>Compra Agora</button></div>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div></div>
                     </div>
                     <div class="card"> 
                         <div>
@@ -467,7 +486,11 @@
                             <h2>Sushine</h2>
                             <p>Captura a alegria e o calor do verão.</p>
                             <span >R$ 287,00</span>
-                            <button>Compra Agora</button></div>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div></div>
                     </div>
                     <div class="card"> 
                         <div>
@@ -475,7 +498,11 @@
                             <h2> Gangster Boss Legacy</h2>
                             <p>Uma fragrância que exala poder e influência.</p>
                             <span >R$ 129,00</span>
-                            <button>Compra Agora</button></div>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div></div>
                     </div>
                     <div class="card"> 
                         <div>
@@ -483,7 +510,11 @@
                             <h2>Mirage Dourado</h2>
                             <p> Uma fragrância doce e envolvente.</p>
                             <span >R$ 470,00</span>
-                            <button>Compra Agora</button></div>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div></div>
                     </div>
                     <div class="card"> 
                           <div>
@@ -491,7 +522,11 @@
                             <h2>Vipe Noir</h2>
                             <p>Uma fragrância misteriosa e sedutora</p>
                             <span >R$ 670,00</span>
-                            <button>Compra Agora</button></div>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div></div>
                     </div>
                 </div>
                 <div class="carrossel_container">
@@ -506,7 +541,11 @@
                                         <h2>Mirage Dourado</h2>
                                         <p>Deserto de ouro em um frasco perfumado.</p>
                                         <span >R$ 200,00</span>
-                                        <button>Compra Agora</button> </div>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div></div>
                                 </div>
                             </div> 
 
@@ -516,8 +555,15 @@
                                         <img src="/perfumes-men/blue fresh.png" alt="Perfume Fresh Blue">
                                         <h2>Fresh Blue</h2>
                                         <p>Uma explosão de frescor. </p>
-                                        <span >R$ 500,00</span>
-                                        <button>Compra Agora</button></div>
+                                        <div class="preco">
+                                            <span class="preco-antigo">R$500,00</span> 
+                                            <span class="preco-novo"></span>
+                                        </div>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div></div>
                                 </div>
                             </div>
                             <div class="swiper-slide"> 
@@ -526,8 +572,15 @@
                                         <img src="/perfumes-woman/pink.png" alt="Perfume Rosas Encantadoras">
                                         <h2>Rosas Encantadoras</h2>
                                         <p>Um aroma delicado que dança entre as pétalas.</p>
-                                        <span >R$ 390,00</span>
-                                        <button>Compra Agora</button></div>
+                                        <div class="preco">
+                                            <span class="preco-antigo">R$390,00</span> 
+                                            <span class="preco-novo"></span>
+                                        </div>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div></div>
                                 </div>
                             </div>
                             <div class="swiper-slide"> 
@@ -537,7 +590,11 @@
                                         <h2>Imperador Noturno</h2>
                                         <p>Domine a noite com o aroma da realeza</p>
                                         <span >R$ 190,00</span>
-                                        <button>Compra Agora</button></div>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div></div>
                                 </div>
                             </div>
                             <div class="swiper-slide"> 
@@ -547,7 +604,11 @@
                                         <h2>Pure Essence</h2>
                                         <p>Uma essência fresca e delicada em branco.</p>
                                         <span >R$ 120,00</span>
-                                        <button>Compra Agora</button></div>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div></div>
                                 </div>
                             </div>
                             <div class="swiper-slide"> 
@@ -557,7 +618,11 @@
                                         <h2>Midnight Elixir</h2>
                                         <p>Fragrância intensa e sedutora.</p>
                                         <span >R$ 800,00</span>
-                                        <button>Compra Agora</button></div>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div></div>
                                 </div> 
                             </div>
                             <div class="swiper-slide"> 
@@ -567,7 +632,11 @@
                                         <h2>Radiant Bloom</h2>
                                         <p>Fragrância luminosa e vibrante</p>
                                         <span >R$ 100,00</span>
-                                        <button>Compra Agora</button></div>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div></div>
                                 </div>
                             </div>
                             <div class="swiper-slide"> 
@@ -577,7 +646,11 @@
                                         <h2>Evergreen Essence</h2>
                                         <p> A energia e vitalidade da natureza.</p>
                                         <span >R$ 170,00</span>
-                                        <button>Compra Agora</button></div>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div></div>
                                 </div>
                             </div>
                             <div class="swiper-slide"> 
@@ -587,7 +660,11 @@
                                         <h2>Sushine</h2>
                                         <p>Captura a alegria e o calor do verão.</p>
                                         <span >R$ 287,00</span>
-                                        <button>Compra Agora</button></div>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div></div>
                                 </div>
                             </div>
                             <div class="swiper-slide"> 
@@ -597,7 +674,11 @@
                                         <h2> Gangster Boss Legacy</h2>
                                         <p>Uma fragrância que exala poder e influência.</p>
                                         <span >R$ 129,00</span>
-                                        <button>Compra Agora</button></div>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div></div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -607,7 +688,11 @@
                                         <h2>Mirage Dourado</h2>
                                         <p> Uma fragrância doce e envolvente.</p>
                                         <span >R$ 470,00</span>
-                                        <button>Compra Agora</button></div>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div></div>
                                 </div>
                             </div>
                             <div class="swiper-slide"> 
@@ -617,7 +702,11 @@
                                       <h2>Vipe Noir</h2>
                                       <p>Uma fragrância misteriosa e sedutora</p>
                                       <span >R$ 670,00</span>
-                                      <button>Compra Agora</button></div>
+                                      <div class="compra"> 
+                                        <button class="compra-agora">Compra Agora</button>
+                                            <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                            <button id="fav"><i class="bi bi-heart"></i></button>
+                                        </div></div>
                               </div>
                             </div>
 
@@ -636,7 +725,11 @@
                             <h2>Creme para pele</h2>
                             <p>Este creme luxuoso nutre, hidrata e restaura.</p>
                             <span >R$ 35,00</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                     <div class="card"> 
@@ -645,7 +738,11 @@
                             <h2>Pele de Seda</h2>
                             <p> Espuma de cuidados com a pele suave e nutritiva.</p>
                             <span >R$ 39,90</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                     <div class="card"> 
@@ -654,7 +751,11 @@
                             <h2>HidraMacia</h2>
                             <p> Creme hidratante para uma pele sedosa.</p>
                             <span >R$ 45,00</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div> 
                     <div class="card"> 
@@ -663,7 +764,11 @@
                             <h2>Pure Fresh</h2>
                             <p>  Lenços umedecidos para uma limpeza suave.</p>
                             <span >R$ 15,80</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                     <div class="card"> 
@@ -672,7 +777,11 @@
                             <h2>Máscara Pele Renovada</h2>
                             <p>  Máscara facial para revitalização e hidratação.</p>
                             <span >R$ 19,99</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                     <div class="card"> 
@@ -681,25 +790,37 @@
                             <h2>Escudo Solar</h2>
                             <p>  Protetor solar para uma pele saudável.</p>
                             <span >R$ 29,99</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div> 
                     <div class="card"> 
                         <div>
                             <img src="/skin care/sabonete facial.png" alt="Brilho Puro">
                             <h2>Brilho Puro</h2>
-                            <p> Sabonete facial líquido para uma pele radiante. </p>                            </p>
+                            <p> Sabonete facial líquido para uma pele radiante. </p>                            
                             <span >R$ 20,90</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                     <div class="card"> 
                         <div>
                             <img src="/skin care/seruns.png" alt="Elixir de Juventude">
                             <h2>Elixir de Juventude</h2>
-                            <p> Sérum para uma pele rejuvenescida e radiante. </p>                            </p>
+                            <p> Sérum para uma pele rejuvenescida e radiante. </p>                          
                             <span >R$ 39,90</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                     <div class="card"> 
@@ -707,8 +828,15 @@
                             <img src="/skin care/tonico facial.png" alt="Refrescância Pura">
                             <h2>Midnight Renewal</h2>
                             <p> Tônico facial para uma pele revigorada. </p>                           
-                            <span >R$ 24,90</span>
-                            <button>Compra Agora</button>
+                            <div class="preco">
+                                <span class="preco-antigo">R$24,90</span> 
+                                <span class="preco-novo"></span>
+                            </div>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -726,7 +854,11 @@
                                         <h2>Creme para pele</h2>
                                         <p>Este creme luxuoso nutre, hidrata e restaura.</p>
                                         <span >R$ 35,00</span>
-                                        <button>Compra Agora</button>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div>
                                     </div>
                             </div>
                          </div>
@@ -738,7 +870,11 @@
                                     <h2>Pele de Seda</h2>
                                     <p> Espuma de cuidados com a pele suave e nutritiva.</p>
                                     <span >R$ 39,90</span>
-                                    <button>Compra Agora</button>
+                                    <div class="compra"> 
+                                        <button class="compra-agora">Compra Agora</button>
+                                            <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                            <button id="fav"><i class="bi bi-heart"></i></button>
+                                        </div>
                                 </div>
                             </div>
                          </div>
@@ -750,7 +886,11 @@
                                     <h2>HidraMacia</h2>
                                     <p> Creme hidratante para uma pele sedosa.</p>
                                     <span >R$ 45,00</span>
-                                    <button>Compra Agora</button>
+                                    <div class="compra"> 
+                                        <button class="compra-agora">Compra Agora</button>
+                                            <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                            <button id="fav"><i class="bi bi-heart"></i></button>
+                                        </div>
                                 </div>
                             </div> 
                          </div> 
@@ -762,7 +902,11 @@
                                     <h2>Pure Fresh</h2>
                                     <p>  Lenços umedecidos para uma limpeza suave.</p>
                                     <span >R$ 15,80</span>
-                                    <button>Compra Agora</button>
+                                    <div class="compra"> 
+                                        <button class="compra-agora">Compra Agora</button>
+                                            <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                            <button id="fav"><i class="bi bi-heart"></i></button>
+                                        </div>
                                 </div>
                             </div>
                          </div>
@@ -774,7 +918,11 @@
                                     <h2>Máscara Pele Renovada</h2>
                                     <p>  Máscara facial para revitalização e hidratação.</p>
                                     <span >R$ 19,99</span>
-                                    <button>Compra Agora</button>
+                                    <div class="compra"> 
+                                        <button class="compra-agora">Compra Agora</button>
+                                            <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                            <button id="fav"><i class="bi bi-heart"></i></button>
+                                        </div>
                                 </div>
                             </div>
                          </div>
@@ -786,7 +934,11 @@
                                     <h2>Escudo Solar</h2>
                                     <p>  Protetor solar para uma pele saudável.</p>
                                     <span >R$ 29,99</span>
-                                    <button>Compra Agora</button>
+                                    <div class="compra"> 
+                                        <button class="compra-agora">Compra Agora</button>
+                                            <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                            <button id="fav"><i class="bi bi-heart"></i></button>
+                                        </div>
                                 </div>
                             </div> 
                          </div>
@@ -796,9 +948,13 @@
                                 <div>
                                     <img src="/skin care/sabonete facial.png" alt="Brilho Puro">
                                     <h2>Brilho Puro</h2>
-                                    <p> Sabonete facial líquido para uma pele radiante. </p>                            </p>
+                                    <p> Sabonete facial líquido para uma pele radiante. </p>                            
                                     <span >R$ 20,90</span>
-                                    <button>Compra Agora</button>
+                                    <div class="compra"> 
+                                        <button class="compra-agora">Compra Agora</button>
+                                            <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                            <button id="fav"><i class="bi bi-heart"></i></button>
+                                        </div>
                                 </div>
                             </div>
                          </div>
@@ -808,9 +964,13 @@
                                 <div>
                                     <img src="/skin care/seruns.png" alt="Elixir de Juventude">
                                     <h2>Elixir de Juventude</h2>
-                                    <p> Sérum para uma pele rejuvenescida e radiante. </p>                            </p>
+                                    <p> Sérum para uma pele rejuvenescida e radiante. </p>                          
                                     <span >R$ 39,90</span>
-                                    <button>Compra Agora</button>
+                                    <div class="compra"> 
+                                        <button class="compra-agora">Compra Agora</button>
+                                            <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                            <button id="fav"><i class="bi bi-heart"></i></button>
+                                        </div>
                                 </div>
                             </div>
 
@@ -822,8 +982,15 @@
                                     <img src="/skin care/tonico facial.png" alt="Refrescância Pura">
                                     <h2>Midnight Renewal</h2>
                                     <p> Tônico facial para uma pele revigorada. </p>                           
-                                    <span >R$ 24,90</span>
-                                    <button>Compra Agora</button>
+                                    <div class="preco">
+                                        <span class="preco-antigo">R$24,90</span> 
+                                        <span class="preco-novo"></span>
+                                    </div>
+                                    <div class="compra"> 
+                                        <button class="compra-agora">Compra Agora</button>
+                                            <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                            <button id="fav"><i class="bi bi-heart"></i></button>
+                                        </div>
                                 </div>
                             </div>
                          </div>
@@ -842,7 +1009,11 @@
                             <h2>Base Meio-Tom Noir</h2>
                             <p>Base para uma tonalidade uniforme e natural.</p>
                             <span >R$ 35,00</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                     <div class="card"> 
@@ -851,7 +1022,11 @@
                             <h2>Batom Vermelho Intenso</h2>
                             <p>Sua cor vibrante e duradoura.</p>
                             <span >R$ 18,00</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                     <div class="card"> 
@@ -860,7 +1035,11 @@
                             <h2> Rosa Sutil</h2>
                             <p> Bronzer para um toque rosado e natural.</p>
                             <span >R$ 29,90</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div> 
                     <div class="card"> 
@@ -869,7 +1048,11 @@
                             <h2> Pele Dourada </h2>
                             <p> Corretivo para tons de pele pardos. </p>
                             <span >R$ 16,90</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                     <div class="card"> 
@@ -878,7 +1061,11 @@
                             <h2> Olhar Cativante </h2>
                             <p> Delineador para um olhar marcante. </p>
                             <span >R$ 14,90</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                     <div class="card"> 
@@ -886,8 +1073,15 @@
                             <img src="/maquiagem/gloss.png" alt="Gloss Pink Petal Shine">
                             <h2> Pink Petal Shine </h2>
                             <p> Brilhe como uma pétala rosa com nosso gloss delicado. </p>
-                            <span >R$ 15,00</span>
-                            <button>Compra Agora</button>
+                            <div class="preco">
+                                <span class="preco-antigo">R$15,00</span> 
+                                <span class="preco-novo"></span>
+                            </div>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                     <div class="card"> 
@@ -896,7 +1090,11 @@
                             <h2> Brilho Radiante </h2>
                             <p> Iluminador para realçar os pontos altos do rosto. </p>
                             <span >R$ 24,90</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                     <div class="card"> 
@@ -905,7 +1103,11 @@
                             <h2> Cacau Suave </h2>
                             <p> Lápis de cor em tom suave de marrom. </p>
                             <span >R$ 4,99</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                     <div class="card"> 
@@ -914,7 +1116,11 @@
                             <h2> Arqueado Perfeito </h2>
                             <p>  Lápis para sobrancelhas em várias cores. </p>
                             <span >R$ 12,00</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                     <div class="card"> 
@@ -922,8 +1128,14 @@
                             <img src="/maquiagem/po facial.png" alt="Po facial Eclat Noir">
                             <h2> Éclat Noir </h2>
                             <p>  Pó facial toque final para um brilho impecável. </p>
-                            <span >R$ 25,00</span>
-                            <button>Compra Agora</button>
+                            <div class="preco">
+                                <span class="preco-antigo">R$25,00</span> <span class="preco-novo"></span>
+                            </div>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                     <div class="card"> 
@@ -932,7 +1144,11 @@
                             <h2> Círculo Cromático </h2>
                             <p> Paleta de sombras com várias cores, perfeita para seus olhos.  </p>
                             <span >R$ 49,99</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -950,7 +1166,11 @@
                                         <h2>Base Meio-Tom Noir</h2>
                                         <p>Base para uma tonalidade uniforme e natural.</p>
                                         <span >R$ 35,00</span>
-                                        <button>Compra Agora</button>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -962,7 +1182,11 @@
                                         <h2>Batom Vermelho Intenso</h2>
                                         <p>Sua cor vibrante e duradoura.</p>
                                         <span >R$ 18,00</span>
-                                        <button>Compra Agora</button>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -974,7 +1198,11 @@
                                         <h2> Rosa Sutil</h2>
                                         <p> Bronzer para um toque rosado e natural.</p>
                                         <span >R$ 29,90</span>
-                                        <button>Compra Agora</button>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div>
                                     </div>
                                 </div> 
                             </div>
@@ -985,7 +1213,11 @@
                                         <h2> Pele Dourada </h2>
                                         <p> Corretivo para tons de pele pardos. </p>
                                         <span >R$ 16,90</span>
-                                        <button>Compra Agora</button>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -997,7 +1229,11 @@
                                         <h2> Olhar Cativante </h2>
                                         <p> Delineador para um olhar marcante. </p>
                                         <span >R$ 14,90</span>
-                                        <button>Compra Agora</button>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -1008,8 +1244,14 @@
                                         <img src="/maquiagem/gloss.png" alt="Gloss Pink Petal Shine">
                                         <h2> Pink Petal Shine </h2>
                                         <p> Brilhe como uma pétala rosa com nosso gloss delicado. </p>
-                                        <span >R$ 15,00</span>
-                                        <button>Compra Agora</button>
+                                        <div class="preco">
+                                            <span class="preco-antigo">R$15,00</span> <span class="preco-novo"></span>
+                                        </div>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -1021,7 +1263,11 @@
                                         <h2> Brilho Radiante </h2>
                                         <p> Iluminador para realçar os pontos altos do rosto. </p>
                                         <span >R$ 24,90</span>
-                                        <button>Compra Agora</button>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -1033,7 +1279,11 @@
                                         <h2> Cacau Suave </h2>
                                         <p> Lápis de cor em tom suave de marrom. </p>
                                         <span >R$ 4,99</span>
-                                        <button>Compra Agora</button>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -1045,7 +1295,11 @@
                                         <h2> Arqueado Perfeito </h2>
                                         <p>  Lápis para sobrancelhas em várias cores. </p>
                                         <span >R$ 12,00</span>
-                                        <button>Compra Agora</button>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -1055,9 +1309,13 @@
                                     <div>
                                         <img src="/maquiagem/sombra.png" alt="Sombra Círculo Cromático">
                                         <h2> Círculo Cromático </h2>
-                                        <p> Paleta de sombras com várias cores, perfeita para seus olhos.  </p>
+                                        <p> Paleta de sombras com várias cores, perfeita para seus olhos. 
                                         <span >R$ 49,99</span>
-                                        <button>Compra Agora</button>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -1075,7 +1333,11 @@
                             <h2>Essência Corporal</h2>
                             <p> Hidratante corporal para nutrir e revitalizar a pele.</p>
                             <span >R$ 29,90</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                     <div class="card"> 
@@ -1084,7 +1346,11 @@
                             <h2>Refrescar Pós-Sol</h2>
                             <p> Loção para acalmar e refrescar a pele após exposição solar. </p>
                             <span >R$ 17,90</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                     <div class="card"> 
@@ -1092,8 +1358,14 @@
                             <img src="/corpo/oleo-corporal.png" alt="Oleo Corporal Ebano Sedutor">
                             <h2>Ébano Sedutor</h2>
                             <p> Deslize pela sedução com nosso óleo corporal de luxo.  </p>
-                            <span >R$ 35,00</span>
-                            <button>Compra Agora</button>
+                            <div class="preco">
+                                <span class="preco-antigo">R$35,00</span> <span class="preco-novo"></span>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="card"> 
@@ -1102,7 +1374,11 @@
                             <h2>Pureza Refrescante</h2>
                             <p> Sabonete para uma limpeza refrescante e revitalizante.  </p>
                             <span >R$ 10,99</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -1119,7 +1395,11 @@
                                         <h2>Essência Corporal</h2>
                                         <p> Hidratante corporal para nutrir e revitalizar a pele.</p>
                                         <span >R$ 29,90</span>
-                                        <button>Compra Agora</button>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div>
                                     </div>
                                 </div>
                         </div>
@@ -1131,7 +1411,11 @@
                                     <h2>Refrescar Pós-Sol</h2>
                                     <p> Loção para acalmar e refrescar a pele após exposição solar. </p>
                                     <span >R$ 17,90</span>
-                                    <button>Compra Agora</button>
+                                    <div class="compra"> 
+                                        <button class="compra-agora">Compra Agora</button>
+                                            <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                            <button id="fav"><i class="bi bi-heart"></i></button>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -1142,8 +1426,13 @@
                                     <img src="/corpo/oleo-corporal.png" alt="Oleo Corporal Ebano Sedutor">
                                     <h2>Ébano Sedutor</h2>
                                     <p> Deslize pela sedução com nosso óleo corporal de luxo.  </p>
-                                    <span >R$ 35,00</span>
-                                    <button>Compra Agora</button>
+                                    <div class="preco">
+                                        <span class="preco-antigo">R$35,00</span> <span class="preco-novo"></span></div>
+                                    <div class="compra"> 
+                                        <button class="compra-agora">Compra Agora</button>
+                                            <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                            <button id="fav"><i class="bi bi-heart"></i></button>
+                                        </div>
                                 </div>
                             </div>
 
@@ -1156,7 +1445,11 @@
                                     <h2>Pureza Refrescante</h2>
                                     <p> Sabonete para uma limpeza refrescante e revitalizante.  </p>
                                     <span >R$ 10,99</span>
-                                    <button>Compra Agora</button>
+                                    <div class="compra"> 
+                                        <button class="compra-agora">Compra Agora</button>
+                                            <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                            <button id="fav"><i class="bi bi-heart"></i></button>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -1176,7 +1469,11 @@
                             <h2> Sedução dos Cabelos</h2>
                             <p>  Condicionador para nutrir e suavizar os cabelos.</p>
                             <span >R$ 59,99</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                     <div class="card"> 
@@ -1185,7 +1482,11 @@
                             <h2> Sedução dos Cabelos </h2>
                             <p>  Shampoo para nutrir e suavizar os cabelos.</p>
                             <span >R$ 39,99</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                     <div class="card"> 
@@ -1194,7 +1495,11 @@
                             <h2>Suave Desembaraço</h2>
                             <p> Escova de cabelo para desembaraçar suavemente. </p>
                             <span >R$ 99,90</span>
-                            <button>Compra Agora</button>
+                            <div class="compra"> 
+                                <button class="compra-agora">Compra Agora</button>
+                                    <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                    <button id="fav"><i class="bi bi-heart"></i></button>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -1211,7 +1516,11 @@
                                         <h2> Sedução dos Cabelos</h2>
                                         <p>  Condicionador para nutrir e suavizar os cabelos.</p>
                                         <span >R$ 59,99</span>
-                                        <button>Compra Agora</button>
+                                        <div class="compra"> 
+                                            <button class="compra-agora">Compra Agora</button>
+                                                <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                                <button id="fav"><i class="bi bi-heart"></i></button>
+                                            </div>
                                     </div>
                                 </div>
                         </div>
@@ -1222,7 +1531,11 @@
                                     <h2> Sedução dos Cabelos </h2>
                                     <p>  Shampoo para nutrir e suavizar os cabelos.</p>
                                     <span >R$ 39,99</span>
-                                    <button>Compra Agora</button>
+                                    <div class="compra"> 
+                                        <button class="compra-agora">Compra Agora</button>
+                                            <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                            <button id="fav"><i class="bi bi-heart"></i></button>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -1233,7 +1546,11 @@
                                     <h2>Suave Desembaraço</h2>
                                     <p> Escova de cabelo para desembaraçar suavemente. </p>
                                     <span >R$ 99,90</span>
-                                    <button>Compra Agora</button>
+                                    <div class="compra"> 
+                                        <button class="compra-agora">Compra Agora</button>
+                                            <button id="carrinho-lj"><i class="bi bi-cart"></i></button>
+                                            <button id="fav"><i class="bi bi-heart"></i></button>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -1282,35 +1599,7 @@
     </footer>
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script> 
-
-       const swiper = new Swiper('.swiper', {
-        spaceBetween: 10,
-        slidesPerView: 1,
-        pagination:{ 
-            el:'.swiper-pagination',
-            type:'bullets',
-        },
-        });    
-
-
-                    $(function() {
-                const toggleMenu = e => {
-                    e.preventDefault();
-                    $(e.currentTarget).next('.lista-menu').toggleClass('show');
-                };
-
-                $('.link').on('click', toggleMenu);
-            });
-
-            const navbar= document.querySelector(".navbar"); 
-            const menuButton = document.querySelector(".menu-mob"); 
-
-            menuButton.addEventListener("click", () => { 
-                navbar.classList.toggle("mostrar-menu");
-            });
-
-           
-    </script>
+    <script src="/app/main.js"></script>
+    <script src="/app/feedback.js"></script>
 </body>
 </html>
