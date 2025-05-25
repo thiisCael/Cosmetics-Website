@@ -93,4 +93,4 @@ Contributions are welcome! If you have suggestions for improvements, bug fixes o
 ![](/icons/do-utilizador.png)
 Rayssa de Souza Inocencio
 
-![](/icons/outlook.png) dev_rayssa@hotmail.com
+![](/icons/outlook.png) rayssaa.souzaa.26@gmail.com
