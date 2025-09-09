@@ -91,6 +91,6 @@ Contributions are welcome! If you have suggestions for improvements, bug fixes o
 ## ![](/icons/contato.png) Contact
 
 ![](/icons/do-utilizador.png)
-Rayssa de Souza Inocencio
+Cael de Souza Inocencio
 
-![](/icons/outlook.png) rayssaa.souzaa.26@gmail.com
+![](/icons/outlook.png) caael.souz4@gmail.com
